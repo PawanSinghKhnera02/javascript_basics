@@ -13,7 +13,7 @@ const user = {
 function handleObject(anyobject){
     console.log(`username is ${anyobject.username} and price is ${anyobject.price}`)
 }
-// handleObject(user);
+handleObject(user);
 handleObject({   //we can also pass direct object
     username: "sam",
     price: 300

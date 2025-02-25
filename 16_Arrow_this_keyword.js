@@ -34,11 +34,11 @@ const coffee =  () => {
 
 
 // =================== Arrow function ====================
-//basc arrow funtion
+//basic arrow funtion
 const addtwo = (num1, num2) => {
     return num1 + num2
 }
-console.log(addtwo(2,3));
+console.log(addtwo(10,3));
 
 
 //implicit return //doesnt requied return keyword
@@ -46,7 +46,7 @@ const addTwo = (num1, num2) => num1 + num2
 const AddTwo = (num1, num2) => ({username: "pawan"})  //object return requires square bracket
 const addthree = (num1, num2) => (num1 + num2 + num3)
 
-console.log(addTwo(5,3));
+console.log(addTwo(5,1));
 console.log(AddTwo(5,3));
 console.log(addTwo(4,1,3));
 

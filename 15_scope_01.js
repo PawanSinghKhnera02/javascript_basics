@@ -39,9 +39,9 @@ if (true) {
 // ======================= Interesting==============================
 console.log(addone(5)); // it runs perfectly fine 
 function addone(num) {
-    return num + 1
+    return num + 3
 }
-addone(5);
+// addone(5);
 
 // console.log(addtwo(5)); // it gives error if we try to console before function declaration with assigning to variable
 const addtwo = function (num) {
