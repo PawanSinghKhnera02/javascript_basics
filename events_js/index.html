@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <ul id="images">
+        <li><img width="200px" id="photoshop" src="./photos/pexels-vasilis-karkalas-155349971-30999314.jpg" alt="photoshop"></li>
+
+        <li><img width="200px" id="japan" src="./photos/pexels-kovyrina-30872675.jpg" alt=""></li>
+
+        <li><img width="200px" id="river" src="./photos/pexels-vasilis-karkalas-155349971-30999314.jpg" alt=""></li>
+
+        <li><img width="200px" id="parrot" src="./photos/pexels-eugeniofr-30005397.jpg" alt="" ></li>
+
+        <li><img width="200px" id="prayer" src="./photos/pexels-yankrukov-7011412.jpg" alt=""></li>
+
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+    <script>
+        // document.getElementById('parrot').onclick = function(){
+        //     alert('parrot');
+        // }
+        
+        //attachEvent method
+        //jQuery - onEventListener
+        //type,timestamp, defaultPrevented
+        //target, toElement, srcElement, currentTarget,
+        //clientX, clientY, screenX, screenY
+        //altkey, ctrkey, shiftkey, keycode
+
+        //event bubbling - inner to outer (propagation)
+        //event capturing - outer to inner (propagation)
+/*
+        document.getElementById('images').addEventListener('click', function(e){
+            console.log("clicked inside the ul");
+        },false)
+
+        document.getElementById('parrot').addEventListener('click', function(e){
+            console.log("clicked parrot");
+            e.stopPropagation();
+        },false)
+
+        document.getElementById('google').addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("google clicked")
+        },false)
+*/
+
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === "IMG"){
+        console.log(e.target.id)
+        let removeit = e.target.parentNode;
+        removeit.remove();
+    }
+
+},false)
+
+// removeit.parentNode.removeChild(removeit);
+
+    </script>
+</body>
+</html>
