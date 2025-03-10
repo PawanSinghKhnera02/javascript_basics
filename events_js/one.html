@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html Events</title>
+    <title>html Events 01</title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing images</h2>
@@ -54,7 +54,7 @@
 document.querySelector('#images').addEventListener('click', function(e){
     console.log(e.target.tagName);
     if(e.target.tagName === "IMG"){
-        console.log(e.target.id)
+        // console.log(e.target.id)
         let removeit = e.target.parentNode;
         removeit.remove();
     }

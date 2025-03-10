@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 3// setInterval</title>
+</head>
+<body>
+    <h1>Pawan Singh Khnera</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button> 
+
+
+    <script>
+        const hey= (str) => {
+            // console.log('pawan', Date.now());
+            console.log(str, Date.now());
+        }
+        // setInterval(hey, 1000)
+        // setInterval(hey, 1000, "hello") // set interval can take a string.
+        let interval;
+        const startbtn = document.querySelector('#start');
+        startbtn.addEventListener('click', (e)=>{
+            interval = setInterval(hey, 1000, "brocode");
+        },false)
+
+        const stopbtn = document.querySelector('#stop');
+        stopbtn.addEventListener('click',(e)=>{
+            clearInterval(interval);
+            console.log('stopped interval');
+        },false)
+
+    </script>
+</body>
+</html>
